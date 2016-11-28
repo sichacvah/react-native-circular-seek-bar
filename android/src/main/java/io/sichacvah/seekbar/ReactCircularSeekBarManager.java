@@ -62,7 +62,7 @@ public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircular
     @ReactProp(name = "strokeWidth")
     public void setCircleStroke(ReactCircularSeekBar view, @Nullable float width) {
         if (width != null) {
-            view.mCirclePaint.setBorderWidth(width);
+            view.mCirclePaint.setStrokeWidth(width);
         }
     }
 

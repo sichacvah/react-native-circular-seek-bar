@@ -824,7 +824,7 @@ public class ReactCircularSeekBar extends View {
 
 		initAttributes();
 
-		attrArray.recycle();
+		// attrArray.recycle();
 
 		initPaints();
 	}
