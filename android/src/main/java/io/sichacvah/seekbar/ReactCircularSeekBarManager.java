@@ -41,11 +41,7 @@ public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircular
 
     @ReactProp(name = "circleProgressColor", customType = "Color")
     public void setProgressColor(ReactCircularSeekBar view, Integer color) {
-        if (!color) {
-            view.setCircleProgressColor(Color.TRANSPARENT);
-        } else {
             view.setCircleProgressColor(color);
-        }
     }
 
     @ReactProp(name = "progress")
