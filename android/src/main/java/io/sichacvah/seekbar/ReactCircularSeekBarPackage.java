@@ -1,4 +1,4 @@
-package io.sichacvah.radioplayer;
+package io.sichacvah.circlularseekbar;
 
 import android.app.Activity;
 

@@ -25,7 +25,7 @@
  * reference material, and as a result, were extremely helpful.
  */
 
-package mgc.rockabillyradio;
+package io.sichacvah.circlularseekbar;
 
 import android.content.Context;
 import android.content.res.TypedArray;
