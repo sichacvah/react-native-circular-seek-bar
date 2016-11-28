@@ -103,7 +103,7 @@ public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircular
 
     @ReactProp(name = "pointerHaloColorOnTouch", customType="Color")
     public void setPointerHaloColorOnTouch(ReactCircularSeekBar view,  int color) {
-        view.mPointerHaloColorOnTouch = color
+        view.mPointerHaloColorOnTouch = color;
     }
 
 
