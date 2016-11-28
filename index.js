@@ -15,7 +15,7 @@ var iface = {
     max: PropTypes.number,
     pointerAlphaOnTouch: PropTypes.number,
     pointerColor: ColorPropType,
-    reactHaloColor: ColorPropType,
+    pointerHaloColor: ColorPropType,
     useCustomRadius: PropTypes.bool,
     ...View.propTypes // include the default view properties
   }

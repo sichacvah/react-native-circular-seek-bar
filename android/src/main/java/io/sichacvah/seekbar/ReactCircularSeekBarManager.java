@@ -96,7 +96,7 @@ public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircular
             view.setPointerColor(color);
     }
 
-    @ReactProp(name = "reactHaloColor")
+    @ReactProp(name = "pointerHaloColor", customType="Color")
     public void setPointerHaloColor(ReactCircularSeekBar view,  int color) {
             view.setPointerHaloColor(color);
     }
