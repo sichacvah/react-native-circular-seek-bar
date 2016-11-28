@@ -15,9 +15,11 @@ import com.facebook.react.module.annotations.ReactModule;
 import com.facebook.react.uimanager.PixelUtil;
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
+import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.uimanager.ViewProps;
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.uimanager.annotations.ReactPropGroup;
+import com.facebook.react.uimanager.UIManagerModule;
 
 
 public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircularSeekBar> {
@@ -28,16 +30,16 @@ public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircular
                 public void onProgressChanged(ReactCircularSeekBar circularSeekBar, int progress, boolean fromUser) {
                         ReactContext reactContext = (ReactContext) circularSeekBar.getContext();
                         reactContext.getNativeModule(UIManagerModule.class).getEventDispatcher().dispatchEvent(
-                        new ReactSliderEvent(
+                        new ReactCircularSeekBarEvent(
                                 circularSeekBar.getId(),
                                 progress,
                                 fromUser));
                 }
                 @Override
-                public void onStopTrackingTouch(CircularSeekBar seekBar) {}
+                public void onStopTrackingTouch(ReactCircularSeekBar seekBar) {}
 
                 @Override
-                public void onStartTrackingTouch(CircularSeekBar seekBar) {}
+                public void onStartTrackingTouch(ReactCircularSeekBar seekBar) {}
 
         };
 
@@ -133,7 +135,7 @@ public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircular
     }
 
     @Override
-    protected void addEventListeners(final ThemedReactContext reactContext, final ReactCircularSeekBar view) {
+    protected void addEventEmitters(final ThemedReactContext reactContext, final ReactCircularSeekBar view) {
             view.setOnSeekBarChangeListener(ON_CHANGE_LISTENER);
     }
 }
