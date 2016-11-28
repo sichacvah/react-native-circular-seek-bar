@@ -7,7 +7,7 @@ var iface = {
     circleColor: ColorPropType,
     circleProgressColor: ColorPropType,
     progress: PropTypes.number,
-    storkeWidth: PropTypes.number,
+    strokeWidth: PropTypes.number,
     circleXRadius: PropTypes.number,
     circleYRadius: PropTypes.number,
     endAngle: PropTypes.number,
