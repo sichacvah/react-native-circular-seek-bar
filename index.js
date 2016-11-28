@@ -1,41 +1,24 @@
-import { 
-    DeviceEventEmitter,
-    NativeModules 
-} from 'react-native'
+import { PropTypes } from 'react';
+import { requireNativeComponent, View, ColorPropType } from 'react-native';
 
-let PlayerModule = NativeModules.PlayerModule;
-
-const Player = {
-    start(url = "http://lin3.ash.fast-serv.com:6026/stream_96") {
-        PlayerModule.start(url)
-    },
-
-    stop() {
-        PlayerModule.stop()
-    },
-
-    setVolume(volume = 0) {
-        PlayerModule.setVolume(volume)
-    },
-
-    addListener(type, cb) {
-        switch(type) {
-            case "start":
-                DeviceEventEmitter.addListener("start", cb)
-                break
-            case "stop":
-                DeviceEventEmitter.addListener("stop", cb)
-                break
-            case "volume_changed":
-                DeviceEventEmitter.addListener("volume_changed", cb)
-                break
-        }
-    },
-
-    removeEventListener(type) {
-        DeviceEventEmitter.removeAllListeners(type)
-    }
+var iface = {
+  name: 'ReactCircularSeekBar',
+  propTypes: {
+    circleColor: ColorPropType,
+    circleProgressColor: ColorPropType,
+    progress: PropTypes.int,
+    storkeWidth: PropTypes.float,
+    circleXRadius: PropTypes.float,
+    circleYRadius: PropTypes.float,
+    endAngle: PropTypes.float,
+    startAngle: PropTypes.float,
+    max: PropTypes.int,
+    pointerAlphaOnTouch: PropTypes.int,
+    pointerColor: ColorPropType,
+    reactHaloColor: ColorPropType,
+    useCustomRadius: PropTypes.bool,
+    ...View.propTypes // include the default view properties
+  }
 }
 
-
-export default Player;
+module.exports = requireNativeComponent('ReactCircularSeekBar', iface);
