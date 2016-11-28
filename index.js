@@ -35,7 +35,8 @@ CircularSeekBarView.propTypes = {
     pointerHaloColorOnTouch: ColorPropType,
     useCustomRadius: PropTypes.bool,
     ...View.propTypes, // include the default view properties
-},
+}
 
 const RCTCircularSeekBarView = requireNativeComponent('CircularSeekBarView', CircularSeekBarView);
 
+export default CircularSeekBarView 
