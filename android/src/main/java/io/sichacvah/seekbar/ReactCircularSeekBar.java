@@ -829,17 +829,17 @@ public class ReactCircularSeekBar extends View {
 		initPaints();
 	}
 
-	public CircularSeekBar(Context context) {
+	public ReactCircularSeekBar(Context context) {
 		super(context);
 		init(null, 0);
 	}
 
-	public CircularSeekBar(Context context, AttributeSet attrs) {
+	public ReactCircularSeekBar(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		init(attrs, 0);
 	}
 
-	public CircularSeekBar(Context context, AttributeSet attrs, int defStyle) {
+	public ReactCircularSeekBar(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		init(attrs, defStyle);
 	}
