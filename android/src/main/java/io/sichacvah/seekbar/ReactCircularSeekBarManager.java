@@ -91,7 +91,7 @@ public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircular
             view.setAlpha(alpha);
     }
 
-    @ReactProp(name = "pointerColor")
+    @ReactProp(name = "pointerColor",customType = "Color")
     public void setPointerColor(ReactCircularSeekBar view,  int color) {
             view.setPointerColor(color);
     }
