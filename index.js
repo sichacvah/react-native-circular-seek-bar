@@ -1,4 +1,4 @@
-import { PropTypes, Component } from 'react';
+import React, { PropTypes, Component } from 'react';
 import { requireNativeComponent, View, ColorPropType } from 'react-native';
 
 class CircularSeekBarView extends Component {
