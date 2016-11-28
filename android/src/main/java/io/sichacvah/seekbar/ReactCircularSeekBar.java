@@ -396,8 +396,8 @@ public class ReactCircularSeekBar extends View {
 		lockEnabled = DEFAULT_LOCK_ENABLED;
 
 		// Modulo 360 right now to avoid constant conversion
-		mStartAngle = ((360f + DEFAULT_START_ANGLE % 360f)) % 360f);
-		mEndAngle = ((360f + DEFAULT_END_ANGLE % 360f)) % 360f);
+		mStartAngle = (360f + DEFAULT_START_ANGLE % 360f) % 360f;
+		mEndAngle = (360f + DEFAULT_END_ANGLE % 360f) % 360f;
 
 		if (mStartAngle == mEndAngle) {
 			//mStartAngle = mStartAngle + 1f;
