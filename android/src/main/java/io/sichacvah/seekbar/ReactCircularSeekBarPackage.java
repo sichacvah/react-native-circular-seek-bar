@@ -40,5 +40,6 @@ public class ReactCircularSeekBarPackage implements ReactPackage {
         return Arrays.<ViewManager>asList(
             new ReactCircularSeekBarManager()
         );
+        
     }
 }

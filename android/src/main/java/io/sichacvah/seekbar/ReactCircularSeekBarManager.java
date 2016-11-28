@@ -13,7 +13,7 @@ import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.common.MapBuilder;
 import com.facebook.react.module.annotations.ReactModule;
 import com.facebook.react.uimanager.PixelUtil;
-import com.facebook.react.uimanager.SimpleViewManager;
+import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.ViewProps;
 import com.facebook.react.uimanager.annotations.ReactProp;
@@ -21,8 +21,8 @@ import com.facebook.react.uimanager.annotations.ReactPropGroup;
 
 
 @ReactModule(name = ReactCircularSeekBarManager.REACT_CLASS)
-public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircularSeekBar> {
-    protected static final String REACT_CLASS = "ReactCircularSeekBarManager";
+public class ReactCircularSeekBarManager extends ViewManager<ReactCircularSeekBar> {
+    protected static final String REACT_CLASS = "RCTCircularSeekBarManager";
 
     @Override
     public String getName() {
