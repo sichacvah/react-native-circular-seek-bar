@@ -35,17 +35,13 @@ public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircular
     }
 
     @ReactProp(name = "circleColor",  customType = "Color")
-    public void setElevation(ReactCircularSeekBar view, @Nullable Integer color) {
-        if (color == null) {
-            view.setCircleColor(Color.TRANSPARENT);
-        } else {
-            view.setCircleColor(color);
-        }
+    public void setElevation(ReactCircularSeekBar view, Integer color) {
+        view.setCircleColor(color);        
     }
 
     @ReactProp(name = "circleProgressColor", customType = "Color")
-    public void setProgressColor(ReactCircularSeekBar view, @Nullable Integer color) {
-        if (color == null) {
+    public void setProgressColor(ReactCircularSeekBar view, Integer color) {
+        if (!color) {
             view.setCircleProgressColor(Color.TRANSPARENT);
         } else {
             view.setCircleProgressColor(color);
@@ -53,93 +49,67 @@ public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircular
     }
 
     @ReactProp(name = "progress")
-    public void setProgress(ReactCircularSeekBar view, @Nullable Integer progress) {
-        if (progress != null) {
+    public void setProgress(ReactCircularSeekBar view,  Integer progress) {
             view.setProgress(progress);
-        }
     }
 
     @ReactProp(name = "strokeWidth")
-    public void setCircleStroke(ReactCircularSeekBar view, @Nullable float width) {
-        if (width != null) {
+    public void setCircleStroke(ReactCircularSeekBar view,  float width) {
             view.mCirclePaint.setStrokeWidth(width);
-        }
     }
 
     @ReactProp(name = "circleXRadius")
-    public void setCircleXRadius(ReactCircularSeekBar view, @Nullable float radius) {
-        if (radius != null) {
+    public void setCircleXRadius(ReactCircularSeekBar view,  float radius) {
             view.mCircleXRadius = radius;
-        }
     }
 
     @ReactProp(name = "circleYRadius")
-    public void setCircleYRadius(ReactCircularSeekBar view, @Nullable float radius) {
-        if (radius != null) {
+    public void setCircleYRadius(ReactCircularSeekBar view,  float radius) {
             view.mCircleYRadius = radius;
-        }
     }
 
     @ReactProp(name = "endAngle")
-    public void setEndAngle(ReactCircularSeekBar view, @Nullable float angle) {
-        if (angle != null) {
+    public void setEndAngle(ReactCircularSeekBar view,  float angle) {
             view.mEndAngle = angle;
             view.calculateTotalDegrees();
             view.calculateProgressDegrees();
             view.calculatePointerAngle();
             view.initPaths();
-        }
     }
 
     @ReactProp(name = "startAngle")
-    public void setStartAngle(ReactCircularSeekBar view, @Nullable float angle) {
-        if (angle != null) {
+    public void setStartAngle(ReactCircularSeekBar view,  float angle) {
             view.mStartAngle = angle;
             view.calculateTotalDegrees();
             view.calculateProgressDegrees();
             view.calculatePointerAngle();
             view.initPaths();
-        }
     }
 
     @ReactProp(name = "max")
-    public void setMax(ReactCircularSeekBar view, @Nullable int max) {
-        if (max != null) {
+    public void setMax(ReactCircularSeekBar view,  int max) {
             view.setMax(max);
-        }
     }
 
     @ReactProp(name = "pointerAlphaOnTouch")
-    public void setPointerAlphaOnTouch(ReactCircularSeekBar view, @Nullable int alpha) {
-        if (alpha != null) {
+    public void setPointerAlphaOnTouch(ReactCircularSeekBar view,  int alpha) {
             view.setAlpha(alpha);
-        }
     }
 
     @ReactProp(name = "pointerColor")
-    public void setPointerColor(ReactCircularSeekBar view, @Nullable int color) {
-        if (color == null) {
-            view.setPointerColor(Color.TRANSPARENT);
-        } else {
+    public void setPointerColor(ReactCircularSeekBar view,  int color) {
             view.setPointerColor(color);
-        }
     }
 
     @ReactProp(name = "reactHaloColor")
-    public void setPointerHaloColor(ReactCircularSeekBar view, @Nullable int color) {
-        if (color == null) {
-            view.setPointerHaloColor(Color.TRANSPARENT);
-        } else {
+    public void setPointerHaloColor(ReactCircularSeekBar view,  int color) {
             view.setPointerHaloColor(color);
-        }
     }
 
 
     @ReactProp(name = "useCustomRadius")
-    public void useCustomRadius(ReactCircularSeekBar view, @Nullable boolean use) {
-        if (use != null) {
+    public void useCustomRadius(ReactCircularSeekBar view,  boolean use) {
             view.mCustomRadii = use;
-        }
     }
 
 
