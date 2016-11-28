@@ -22,6 +22,24 @@ import com.facebook.react.uimanager.annotations.ReactPropGroup;
 
 public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircularSeekBar> {
     protected static final String REACT_CLASS = "CircularSeekBarView";
+    private static final ReactCircularSeekBar.OnCircularSeekBarChangeListener ON_CHANGE_LISTENER = 
+        new ReactCircularSeekBar.OnCircularSeekBarChangeListener() {
+                @Override
+                public void onProgressChanged(ReactCircularSeekBar circularSeekBar, int progress, boolean fromUser) {
+                        ReactContext reactContext = (ReactContext) circularSeekBar.getContext();
+                        reactContext.getNativeModule(UIManagerModule.class).getEventDispatcher().dispatchEvent(
+                        new ReactSliderEvent(
+                                circularSeekBar.getId(),
+                                progress,
+                                fromUser));
+                }
+                @Override
+                public void onStopTrackingTouch(CircularSeekBar seekBar) {}
+
+                @Override
+                public void onStartTrackingTouch(CircularSeekBar seekBar) {}
+
+        };
 
     @Override
     public String getName() {
@@ -45,7 +63,9 @@ public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircular
 
     @ReactProp(name = "progress")
     public void setProgress(ReactCircularSeekBar view,  Integer progress) {
+            view.setOnSeekBarChangeListener(null);
             view.setProgress(progress);
+            view.setOnSeekBarChangeListener(ON_CHANGE_LISTENER);
     }
 
     @ReactProp(name = "strokeWidth")
@@ -112,7 +132,8 @@ public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircular
             view.mCustomRadii = use;
     }
 
-
-
-
+    @Override
+    protected void addEventListeners(final ThemedReactContext reactContext, final ReactCircularSeekBar view) {
+            view.setOnSeekBarChangeListener(ON_CHANGE_LISTENER);
+    }
 }
