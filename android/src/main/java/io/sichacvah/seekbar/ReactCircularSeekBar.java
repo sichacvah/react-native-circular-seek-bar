@@ -820,7 +820,7 @@ public class ReactCircularSeekBar extends View {
 	}
 
 	protected void init(AttributeSet attrs, int defStyle) {
-		final TypedArray attrArray = getContext().obtainStyledAttributes(attrs, "CircularSeekBar", defStyle, 0);
+		final TypedArray attrArray = getContext().obtainStyledAttributes(attrs);
 
 		initAttributes(attrArray);
 
