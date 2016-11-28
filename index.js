@@ -2,7 +2,7 @@ import { PropTypes } from 'react';
 import { requireNativeComponent, View, ColorPropType } from 'react-native';
 
 var iface = {
-  name: 'ReactCircularSeekBar',
+  name: 'CircularSeekBarView',
   propTypes: {
     circleColor: ColorPropType,
     circleProgressColor: ColorPropType,
@@ -21,4 +21,4 @@ var iface = {
   }
 }
 
-module.exports = requireNativeComponent('ReactCircularSeekBar', iface);
+module.exports = requireNativeComponent('CircularSeekBarView', iface);
