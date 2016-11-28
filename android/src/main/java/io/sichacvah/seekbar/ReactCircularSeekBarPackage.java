@@ -37,7 +37,7 @@ public class ReactCircularSeekBarPackage implements ReactPackage {
 
     @Override
     public List<SimpleViewManager> createViewManagers(ReactApplicationContext reactContext) {
-        return Arrays.<VieSimpleViewManagerwManager>asList(
+        return Arrays.<SimpleViewManager>asList(
             new ReactCircularSeekBarManager()
         );
         
