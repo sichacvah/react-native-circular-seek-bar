@@ -29,10 +29,6 @@ public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircular
         return REACT_CLASS;
     }
 
-    public Object getCallerContext() {
-        return mCallerContext;
-    }
-
     @Override
     public ReactCircularSeekBar createViewInstance(ThemedReactContext context) {
         return new ReactCircularSeekBar(context);

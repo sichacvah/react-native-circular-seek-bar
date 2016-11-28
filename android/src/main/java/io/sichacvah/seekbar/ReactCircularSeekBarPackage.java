@@ -1,4 +1,4 @@
-package io.sichacvah.circlularseekbar;
+package io.sichacvah.circularseekbar;
 
 import android.app.Activity;
 
