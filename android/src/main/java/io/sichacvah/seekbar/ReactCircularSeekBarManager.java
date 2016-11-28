@@ -20,9 +20,8 @@ import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.uimanager.annotations.ReactPropGroup;
 
 
-@ReactModule(name = ReactCircularSeekBarManager.REACT_CLASS)
 public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircularSeekBar> {
-    protected static final String REACT_CLASS = "RCTCircularSeekBarManager";
+    protected static final String REACT_CLASS = "CircularSeekBarView";
 
     @Override
     public String getName() {

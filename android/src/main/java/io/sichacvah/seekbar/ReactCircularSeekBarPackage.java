@@ -7,7 +7,7 @@ import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
-import com.facebook.react.uimanager.SimpleViewManager;
+import com.facebook.react.uimanager.ViewManager;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -24,10 +24,7 @@ public class ReactCircularSeekBarPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(
             ReactApplicationContext reactContext) {
-        List<NativeModule> modules = new ArrayList<>();
-
-        // modules.add(new PlayerModule(reactContext));
-        return modules;
+        return Collections.emptyList();
     }
 
     @Override
@@ -36,8 +33,8 @@ public class ReactCircularSeekBarPackage implements ReactPackage {
     }
 
     @Override
-    public List<SimpleViewManager> createViewManagers(ReactApplicationContext reactContext) {
-        return Arrays.<SimpleViewManager>asList(
+    public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
+        return Arrays.<ViewManager>asList(
             new ReactCircularSeekBarManager()
         );
         
