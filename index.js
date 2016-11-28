@@ -16,6 +16,7 @@ var iface = {
     pointerAlphaOnTouch: PropTypes.number,
     pointerColor: ColorPropType,
     pointerHaloColor: ColorPropType,
+    pointerHaloColorOnTouch: ColorPropType,
     useCustomRadius: PropTypes.bool,
     ...View.propTypes // include the default view properties
   }
