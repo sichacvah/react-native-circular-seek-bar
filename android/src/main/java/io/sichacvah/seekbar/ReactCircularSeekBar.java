@@ -898,11 +898,11 @@ public class ReactCircularSeekBar extends View {
 	*/
 	public interface OnCircularSeekBarChangeListener {
 
-		public abstract void onProgressChanged(CircularSeekBar circularSeekBar, int progress, boolean fromUser);
+		public abstract void onProgressChanged(ReactCircularSeekBar circularSeekBar, int progress, boolean fromUser);
 
-		public abstract void onStopTrackingTouch(CircularSeekBar seekBar);
+		public abstract void onStopTrackingTouch(ReactCircularSeekBar seekBar);
 
-		public abstract void onStartTrackingTouch(CircularSeekBar seekBar);
+		public abstract void onStartTrackingTouch(ReactCircularSeekBar seekBar);
 	}
 
 	/**
