@@ -17,8 +17,8 @@ import java.util.List;
 /**
  * The React package.
  */
-public class PlayerPackage implements ReactPackage {
-    public PlayerPackage() {
+public class ReactCircularSeekBarPackage implements ReactPackage {
+    public ReactCircularSeekBarPackage() {
     }
 
     @Override
