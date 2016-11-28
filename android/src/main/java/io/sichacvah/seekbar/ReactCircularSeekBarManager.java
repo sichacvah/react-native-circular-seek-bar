@@ -81,7 +81,7 @@ public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircular
     }
 
     @ReactProp(name = "endAngle")
-    public void setCircleYRadius(ReactCircularSeekBar view, @Nullable float angle) {
+    public void setEndAngle(ReactCircularSeekBar view, @Nullable float angle) {
         if (angle != null) {
             view.mEndAngle = angle;
             view.calculateTotalDegrees();
@@ -92,7 +92,7 @@ public class ReactCircularSeekBarManager extends SimpleViewManager<ReactCircular
     }
 
     @ReactProp(name = "startAngle")
-    public void setCircleYRadius(ReactCircularSeekBar view, @Nullable float angle) {
+    public void setStartAngle(ReactCircularSeekBar view, @Nullable float angle) {
         if (angle != null) {
             view.mStartAngle = angle;
             view.calculateTotalDegrees();

@@ -366,7 +366,7 @@ public class ReactCircularSeekBar extends View {
 	 * Uses the defaults defined at the top of this file when an attribute is not specified by the user.
 	 * @param attrArray TypedArray containing the attributes.
 	 */
-	protected void initAttributes(TypedArray attrArray) {
+	protected void initAttributes() {
 		mCircleXRadius = DEFAULT_CIRCLE_X_RADIUS * DPTOPX_SCALE;
 		mCircleYRadius = DEFAULT_CIRCLE_Y_RADIUS * DPTOPX_SCALE;
 		mPointerRadius = DEFAULT_POINTER_RADIUS * DPTOPX_SCALE;
@@ -820,9 +820,9 @@ public class ReactCircularSeekBar extends View {
 	}
 
 	protected void init(AttributeSet attrs, int defStyle) {
-		final TypedArray attrArray = getContext().obtainStyledAttributes(attrs);
+		// final TypedArray attrArray = getContext().obtainStyledAttributes(attrs);
 
-		initAttributes(attrArray);
+		initAttributes();
 
 		attrArray.recycle();
 
